@@ -3,7 +3,6 @@ import {
   header_getSize,
   table_setColumnSizing,
 } from '../column-sizing/columnSizingFeature.utils'
-import { table_getColumn } from '../../core/columns/coreColumnsFeature.utils'
 import { cloneState } from '../../utils'
 import type { CellData, RowData, Updater } from '../../types/type-utils'
 import type { TableFeatures } from '../../types/TableFeatures'
@@ -94,7 +93,7 @@ export function header_getResizeHandler<
   TData extends RowData,
   TValue extends CellData = CellData,
 >(header: Header<TFeatures, TData, TValue>, _contextDocument?: Document) {
-  const column = table_getColumn(header.column.table, header.column.id)!
+  const column = header.table.getColumn(header.column.id)!
   const canResize = column_getCanResize(column)
 
   return (event: unknown) => {

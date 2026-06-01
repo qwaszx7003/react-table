@@ -1,5 +1,4 @@
 import { cloneState, isFunction } from '../../utils'
-import { table_getColumn } from '../../core/columns/coreColumnsFeature.utils'
 import type { Column_Internal } from '../../types/Column'
 import type { CellData, RowData, Updater } from '../../types/type-utils'
 import type { TableFeatures } from '../../types/TableFeatures'
@@ -273,7 +272,7 @@ export function row_getGroupingValue<
     return row._groupingValuesCache[columnId]
   }
 
-  const column = table_getColumn(row.table, columnId) as Column_Internal<
+  const column = row.table.getColumn(columnId) as Column_Internal<
     TFeatures,
     TData
   >

@@ -179,7 +179,7 @@ type User = {
 }
 ```
 
-Where `subRows` is an optional array of `User` objects. This is discussed in more detail in the [Expanding Guide](./expanding).
+Where `subRows` is an optional array of `User` objects. This is discussed in more detail in the [Expanding Guide](../framework/react/guide/expanding).
 
 ### Give Data a "Stable" Reference
 
@@ -252,4 +252,4 @@ Believe it or not, TanStack Table was actually built to scale up to handle poten
 
 The default mindset of a developer building a data grid is to implement server-side pagination, sorting, and filtering for large datasets. This is still usually a good idea, but a lot of developers underestimate how much data can actually be handled in the client with modern browsers and the right optimizations. If your table will never have more than a few thousand rows, you can probably take advantage of the client-side features in TanStack Table instead of implementing them yourself on the server. Before committing to letting TanStack Table's client-side features handle your large dataset, you should test it with your actual data to see if it performs well enough for your needs, of course.
 
-This is discussed in more detail in the [Pagination Guide](./pagination#should-you-use-client-side-pagination).
+This is discussed in more detail in the [Pagination Guide](../framework/react/guide/pagination#should-you-use-client-side-pagination).

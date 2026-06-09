@@ -83,7 +83,7 @@ const firstName = row.original.firstName // { firstName: 'John', lastName: 'Doe'
 
 ### Sub Rows
 
-If you are using either grouping or expanding features, your rows may contain sub-rows or parent row references. This is discussed in much more detail in the [Expanding Guide](./expanding), but here is a quick overview of useful properties and methods for working with sub-rows.
+If you are using either grouping or expanding features, your rows may contain sub-rows or parent row references. This is discussed in much more detail in the [Expanding Guide](../framework/react/guide/expanding), but here is a quick overview of useful properties and methods for working with sub-rows.
 
 - `row.subRows`: An array of sub-rows for the row.
 - `row.depth`: The depth of the row (if nested or grouped) relative to the root row array. 0 for root level rows, 1 for child rows, 2 for grandchild rows, etc.

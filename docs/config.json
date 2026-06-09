@@ -143,25 +143,176 @@
     },
     {
       "label": "Feature Guides",
-      "children": [
-        { "label": "Column Ordering", "to": "guide/column-ordering" },
-        { "label": "Column Pinning", "to": "guide/column-pinning" },
-        { "label": "Column Sizing", "to": "guide/column-sizing" },
-        { "label": "Column Resizing", "to": "guide/column-resizing" },
-        { "label": "Column Visibility", "to": "guide/column-visibility" },
-        { "label": "Column Filtering", "to": "guide/column-filtering" },
-        { "label": "Global Filtering", "to": "guide/global-filtering" },
-        { "label": "Fuzzy Filtering", "to": "guide/fuzzy-filtering" },
-        { "label": "Column Faceting", "to": "guide/column-faceting" },
-        { "label": "Global Faceting", "to": "guide/global-faceting" },
-        { "label": "Grouping", "to": "guide/grouping" },
-        { "label": "Expanding", "to": "guide/expanding" },
-        { "label": "Pagination", "to": "guide/pagination" },
-        { "label": "Row Pinning", "to": "guide/row-pinning" },
-        { "label": "Row Selection", "to": "guide/row-selection" },
-        { "label": "Sorting", "to": "guide/sorting" },
-        { "label": "Virtualization", "to": "guide/virtualization" },
-        { "label": "Custom Features", "to": "guide/custom-features" }
+      "children": [],
+      "frameworks": [
+        {
+          "label": "angular",
+          "children": [
+            { "label": "Column Ordering", "to": "framework/angular/guide/column-ordering" },
+            { "label": "Column Pinning", "to": "framework/angular/guide/column-pinning" },
+            { "label": "Column Sizing", "to": "framework/angular/guide/column-sizing" },
+            { "label": "Column Resizing", "to": "framework/angular/guide/column-resizing" },
+            { "label": "Column Visibility", "to": "framework/angular/guide/column-visibility" },
+            { "label": "Column Filtering", "to": "framework/angular/guide/column-filtering" },
+            { "label": "Global Filtering", "to": "framework/angular/guide/global-filtering" },
+            { "label": "Fuzzy Filtering", "to": "framework/angular/guide/fuzzy-filtering" },
+            { "label": "Column Faceting", "to": "framework/angular/guide/column-faceting" },
+            { "label": "Global Faceting", "to": "framework/angular/guide/global-faceting" },
+            { "label": "Grouping", "to": "framework/angular/guide/grouping" },
+            { "label": "Expanding", "to": "framework/angular/guide/expanding" },
+            { "label": "Pagination", "to": "framework/angular/guide/pagination" },
+            { "label": "Row Pinning", "to": "framework/angular/guide/row-pinning" },
+            { "label": "Row Selection", "to": "framework/angular/guide/row-selection" },
+            { "label": "Sorting", "to": "framework/angular/guide/sorting" },
+            { "label": "Virtualization", "to": "framework/angular/guide/virtualization" },
+            { "label": "Custom Features", "to": "framework/angular/guide/custom-features" }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            { "label": "Column Ordering", "to": "framework/lit/guide/column-ordering" },
+            { "label": "Column Pinning", "to": "framework/lit/guide/column-pinning" },
+            { "label": "Column Sizing", "to": "framework/lit/guide/column-sizing" },
+            { "label": "Column Resizing", "to": "framework/lit/guide/column-resizing" },
+            { "label": "Column Visibility", "to": "framework/lit/guide/column-visibility" },
+            { "label": "Column Filtering", "to": "framework/lit/guide/column-filtering" },
+            { "label": "Global Filtering", "to": "framework/lit/guide/global-filtering" },
+            { "label": "Fuzzy Filtering", "to": "framework/lit/guide/fuzzy-filtering" },
+            { "label": "Column Faceting", "to": "framework/lit/guide/column-faceting" },
+            { "label": "Global Faceting", "to": "framework/lit/guide/global-faceting" },
+            { "label": "Grouping", "to": "framework/lit/guide/grouping" },
+            { "label": "Expanding", "to": "framework/lit/guide/expanding" },
+            { "label": "Pagination", "to": "framework/lit/guide/pagination" },
+            { "label": "Row Pinning", "to": "framework/lit/guide/row-pinning" },
+            { "label": "Row Selection", "to": "framework/lit/guide/row-selection" },
+            { "label": "Sorting", "to": "framework/lit/guide/sorting" },
+            { "label": "Virtualization", "to": "framework/lit/guide/virtualization" },
+            { "label": "Custom Features", "to": "framework/lit/guide/custom-features" }
+          ]
+        },
+        {
+          "label": "react",
+          "children": [
+            { "label": "Column Ordering", "to": "framework/react/guide/column-ordering" },
+            { "label": "Column Pinning", "to": "framework/react/guide/column-pinning" },
+            { "label": "Column Sizing", "to": "framework/react/guide/column-sizing" },
+            { "label": "Column Resizing", "to": "framework/react/guide/column-resizing" },
+            { "label": "Column Visibility", "to": "framework/react/guide/column-visibility" },
+            { "label": "Column Filtering", "to": "framework/react/guide/column-filtering" },
+            { "label": "Global Filtering", "to": "framework/react/guide/global-filtering" },
+            { "label": "Fuzzy Filtering", "to": "framework/react/guide/fuzzy-filtering" },
+            { "label": "Column Faceting", "to": "framework/react/guide/column-faceting" },
+            { "label": "Global Faceting", "to": "framework/react/guide/global-faceting" },
+            { "label": "Grouping", "to": "framework/react/guide/grouping" },
+            { "label": "Expanding", "to": "framework/react/guide/expanding" },
+            { "label": "Pagination", "to": "framework/react/guide/pagination" },
+            { "label": "Row Pinning", "to": "framework/react/guide/row-pinning" },
+            { "label": "Row Selection", "to": "framework/react/guide/row-selection" },
+            { "label": "Sorting", "to": "framework/react/guide/sorting" },
+            { "label": "Virtualization", "to": "framework/react/guide/virtualization" },
+            { "label": "Custom Features", "to": "framework/react/guide/custom-features" }
+          ]
+        },
+        {
+          "label": "preact",
+          "children": [
+            { "label": "Column Ordering", "to": "framework/preact/guide/column-ordering" },
+            { "label": "Column Pinning", "to": "framework/preact/guide/column-pinning" },
+            { "label": "Column Sizing", "to": "framework/preact/guide/column-sizing" },
+            { "label": "Column Resizing", "to": "framework/preact/guide/column-resizing" },
+            { "label": "Column Visibility", "to": "framework/preact/guide/column-visibility" },
+            { "label": "Column Filtering", "to": "framework/preact/guide/column-filtering" },
+            { "label": "Global Filtering", "to": "framework/preact/guide/global-filtering" },
+            { "label": "Fuzzy Filtering", "to": "framework/preact/guide/fuzzy-filtering" },
+            { "label": "Column Faceting", "to": "framework/preact/guide/column-faceting" },
+            { "label": "Global Faceting", "to": "framework/preact/guide/global-faceting" },
+            { "label": "Grouping", "to": "framework/preact/guide/grouping" },
+            { "label": "Expanding", "to": "framework/preact/guide/expanding" },
+            { "label": "Pagination", "to": "framework/preact/guide/pagination" },
+            { "label": "Row Pinning", "to": "framework/preact/guide/row-pinning" },
+            { "label": "Row Selection", "to": "framework/preact/guide/row-selection" },
+            { "label": "Sorting", "to": "framework/preact/guide/sorting" },
+            { "label": "Virtualization", "to": "framework/preact/guide/virtualization" },
+            { "label": "Custom Features", "to": "framework/preact/guide/custom-features" }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            { "label": "Column Ordering", "to": "framework/solid/guide/column-ordering" },
+            { "label": "Column Pinning", "to": "framework/solid/guide/column-pinning" },
+            { "label": "Column Sizing", "to": "framework/solid/guide/column-sizing" },
+            { "label": "Column Resizing", "to": "framework/solid/guide/column-resizing" },
+            { "label": "Column Visibility", "to": "framework/solid/guide/column-visibility" },
+            { "label": "Column Filtering", "to": "framework/solid/guide/column-filtering" },
+            { "label": "Global Filtering", "to": "framework/solid/guide/global-filtering" },
+            { "label": "Fuzzy Filtering", "to": "framework/solid/guide/fuzzy-filtering" },
+            { "label": "Column Faceting", "to": "framework/solid/guide/column-faceting" },
+            { "label": "Global Faceting", "to": "framework/solid/guide/global-faceting" },
+            { "label": "Grouping", "to": "framework/solid/guide/grouping" },
+            { "label": "Expanding", "to": "framework/solid/guide/expanding" },
+            { "label": "Pagination", "to": "framework/solid/guide/pagination" },
+            { "label": "Row Pinning", "to": "framework/solid/guide/row-pinning" },
+            { "label": "Row Selection", "to": "framework/solid/guide/row-selection" },
+            { "label": "Sorting", "to": "framework/solid/guide/sorting" },
+            { "label": "Virtualization", "to": "framework/solid/guide/virtualization" },
+            { "label": "Custom Features", "to": "framework/solid/guide/custom-features" }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            { "label": "Column Ordering", "to": "framework/svelte/guide/column-ordering" },
+            { "label": "Column Pinning", "to": "framework/svelte/guide/column-pinning" },
+            { "label": "Column Sizing", "to": "framework/svelte/guide/column-sizing" },
+            { "label": "Column Resizing", "to": "framework/svelte/guide/column-resizing" },
+            { "label": "Column Visibility", "to": "framework/svelte/guide/column-visibility" },
+            { "label": "Column Filtering", "to": "framework/svelte/guide/column-filtering" },
+            { "label": "Global Filtering", "to": "framework/svelte/guide/global-filtering" },
+            { "label": "Fuzzy Filtering", "to": "framework/svelte/guide/fuzzy-filtering" },
+            { "label": "Column Faceting", "to": "framework/svelte/guide/column-faceting" },
+            { "label": "Global Faceting", "to": "framework/svelte/guide/global-faceting" },
+            { "label": "Grouping", "to": "framework/svelte/guide/grouping" },
+            { "label": "Expanding", "to": "framework/svelte/guide/expanding" },
+            { "label": "Pagination", "to": "framework/svelte/guide/pagination" },
+            { "label": "Row Pinning", "to": "framework/svelte/guide/row-pinning" },
+            { "label": "Row Selection", "to": "framework/svelte/guide/row-selection" },
+            { "label": "Sorting", "to": "framework/svelte/guide/sorting" },
+            { "label": "Virtualization", "to": "framework/svelte/guide/virtualization" },
+            { "label": "Custom Features", "to": "framework/svelte/guide/custom-features" }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            { "label": "Column Ordering", "to": "framework/vue/guide/column-ordering" },
+            { "label": "Column Pinning", "to": "framework/vue/guide/column-pinning" },
+            { "label": "Column Sizing", "to": "framework/vue/guide/column-sizing" },
+            { "label": "Column Resizing", "to": "framework/vue/guide/column-resizing" },
+            { "label": "Column Visibility", "to": "framework/vue/guide/column-visibility" },
+            { "label": "Column Filtering", "to": "framework/vue/guide/column-filtering" },
+            { "label": "Global Filtering", "to": "framework/vue/guide/global-filtering" },
+            { "label": "Fuzzy Filtering", "to": "framework/vue/guide/fuzzy-filtering" },
+            { "label": "Column Faceting", "to": "framework/vue/guide/column-faceting" },
+            { "label": "Global Faceting", "to": "framework/vue/guide/global-faceting" },
+            { "label": "Grouping", "to": "framework/vue/guide/grouping" },
+            { "label": "Expanding", "to": "framework/vue/guide/expanding" },
+            { "label": "Pagination", "to": "framework/vue/guide/pagination" },
+            { "label": "Row Pinning", "to": "framework/vue/guide/row-pinning" },
+            { "label": "Row Selection", "to": "framework/vue/guide/row-selection" },
+            { "label": "Sorting", "to": "framework/vue/guide/sorting" },
+            { "label": "Virtualization", "to": "framework/vue/guide/virtualization" },
+            { "label": "Custom Features", "to": "framework/vue/guide/custom-features" }
+          ]
+        },
+        {
+          "label": "vanilla",
+          "children": [
+            { "label": "Pagination", "to": "framework/vanilla/guide/pagination" },
+            { "label": "Sorting", "to": "framework/vanilla/guide/sorting" }
+          ]
+        }
       ]
     },
     {

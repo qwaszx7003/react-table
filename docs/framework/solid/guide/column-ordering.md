@@ -1,0 +1,152 @@
+---
+title: Column Ordering (Solid) Guide
+---
+
+## Examples
+
+Want to skip to the implementation? Check out these Solid examples:
+
+- [Column Ordering](../examples/column-ordering)
+Use getters for reactive inputs such as `data` when passing Solid signals to `createTable`.
+
+### Solid Setup
+
+```tsx
+import { createTable, tableFeatures, columnOrderingFeature } from '@tanstack/solid-table'
+
+const features = tableFeatures({ columnOrderingFeature })
+
+const table = createTable({
+  features,
+  rowModels: {},
+  columns,
+  get data() {
+    return data
+  },
+})
+```
+
+## Column Ordering (Solid) Guide
+
+By default, columns are ordered in the order they are defined in the `columns` array. However, you can manually specify the column order using the `columnOrder` state. Other features like column pinning and grouping can also affect the column order.
+
+### What Affects Column Order
+
+There are 3 table features that can reorder columns, which happen in the following order:
+
+1. [Column Pinning](./column-pinning) - If pinning, columns are split into left, center (unpinned), and right pinned columns.
+2. Manual **Column Ordering** - A manually specified column order is applied.
+3. [Grouping](./grouping) - If grouping is enabled, a grouping state is active, and `tableOptions.groupedColumnMode` is set to `'reorder' | 'remove'`, then the grouped columns are reordered to the start of the column flow.
+
+> **Note:** `columnOrder` state will only affect unpinned columns if used in conjunction with column pinning.
+
+### Column Order State
+
+If you don't provide a `columnOrder` state, TanStack Table will just use the order of the columns in the `columns` array. However, you can provide an array of string column ids to the `columnOrder` state to specify the order of the columns.
+
+#### Default Column Order
+
+If all you need to do is specify the initial column order, you can just specify the `columnOrder` state in the `initialState` table option.
+
+```tsx
+const table = createTable({
+  features: tableFeatures({ columnOrderingFeature }),
+  rowModels: {},
+  //...
+  initialState: {
+    columnOrder: ['columnId1', 'columnId2', 'columnId3'],
+  },
+  //...
+})
+```
+
+> **Note:** If you are using the `state` table option to also specify the `columnOrder` state, the `initialState` will have no effect. Only specify particular states in either `initialState` or `state`, not both.
+
+#### Managing Column Order State
+
+If you need to dynamically change the column order, or set the column order after the table has been initialized, you can manage the `columnOrder` state just like any other table state.
+
+```tsx
+const [columnOrder, setColumnOrder] = createSignal<string[]>(['columnId1', 'columnId2', 'columnId3'])
+//...
+const table = createTable({
+  features: tableFeatures({ columnOrderingFeature }),
+  rowModels: {},
+  //...
+  state: {
+    columnOrder,
+    //...
+  }
+  onColumnOrderChange: setColumnOrder,
+  //...
+});
+```
+
+### Reordering Columns
+
+If the table has UI that allows the user to reorder columns, you can set up the logic something like this:
+
+```tsx
+const [columnOrder, setColumnOrder] = createSignal<string[]>(columns.map(c => c.id));
+
+//depending on your dnd solution of choice, you may or may not need state like this
+const [movingColumnId, setMovingColumnId] = createSignal<string | null>(null);
+const [targetColumnId, setTargetColumnId] = createSignal<string | null>(null);
+
+//util function to splice and reorder the columnOrder array
+const reorderColumn = <TFeatures extends TableFeatures,  TData extends RowData>(
+  movingColumnId: Column<TFeatures, TData>,
+  targetColumnId: Column<TFeatures, TData>,
+): string[] => {
+  const newColumnOrder = [...columnOrder];
+  newColumnOrder.splice(
+    newColumnOrder.indexOf(targetColumnId),
+    0,
+    newColumnOrder.splice(newColumnOrder.indexOf(movingColumnId), 1)[0],
+  );
+  setColumnOrder(newColumnOrder);
+};
+
+const handleDragEnd = (e: DragEvent) => {
+  if(!movingColumnId || !targetColumnId) return;
+  setColumnOrder(reorderColumn(movingColumnId, targetColumnId));
+};
+
+//use your dnd solution of choice
+```
+
+### Column Ordering APIs
+
+Use `table.setColumnOrder` to update the column order state directly. Use `table.resetColumnOrder` to reset the order to `initialState.columnOrder`, or pass `true` to clear the order state.
+
+```tsx
+table.setColumnOrder(['lastName', 'firstName', 'age'])
+table.resetColumnOrder()
+table.resetColumnOrder(true)
+```
+
+Columns expose helpers for reading their current position after column pinning, manual ordering, and grouping have been applied.
+
+```tsx
+column.getIndex()
+column.getIndex('left')
+column.getIndex('center')
+column.getIndex('right')
+
+column.getIsFirstColumn()
+column.getIsLastColumn()
+```
+
+These helpers are useful for styling column boundaries or building drag-and-drop targets that need to know the current rendered order.
+
+#### Drag and Drop Column Reordering Suggestions (Solid)
+
+There are undoubtedly many ways to implement drag and drop features along-side TanStack Table. Here are a few suggestions in order for you to not have a bad time:
+
+1. Do NOT try to use [`"react-dnd"`](https://react-dnd.github.io/react-dnd/docs/overview) _if you are using Solid or newer_. framework-specific DnD was an important library for its time, but it now does not get updated very often, and it has incompatibilities with Solid, especially in Solid development mode. It is still possible to get it to work, but there are newer alternatives that have better compatibility and are more actively maintained. framework-specific DnD's Provider may also interfere and conflict with any other DnD solutions you may want to try in your app.
+
+2. Use [`"@dnd-kit/core"`](https://dndkit.com/). DnD Kit is a modern, modular and lightweight drag and drop library that is highly compatible with the modern Solid ecosystem, and it works well with semantic `<table>` markup. The official framework-specific DnD examples, Column DnD and Row DnD, use DnD Kit.
+
+3. Consider other DnD libraries like [`"react-beautiful-dnd"`](https://github.com/atlassian/react-beautiful-dnd), but be aware of their potentially large bundle sizes, maintenance status, and compatibility with `<table>` markup.
+
+4. Consider using native browser events and state management to implement lightweight drag and drop features. However, be aware that this approach may not be best for mobile users if you do not go the extra mile to implement proper touch events. [Material React Table V2](https://www.material-react-table.com/docs/examples/column-ordering) is an example of a library that implements TanStack Table with only browser drag and drop events such as `onDragStart`, `onDragEnd`, `onDragEnter` and no other dependencies. Browse its source code to see how it is done.

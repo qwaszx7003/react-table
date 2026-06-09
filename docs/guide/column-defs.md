@@ -275,7 +275,7 @@ columnHelper.accessor('firstName', {
 
 ## Aggregated Cell Formatting
 
-For more info on aggregated cells, see [grouping](./grouping).
+For more info on aggregated cells, see [grouping](../framework/react/guide/grouping).
 
 ## Header & Footer Formatting
 

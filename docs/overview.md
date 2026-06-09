@@ -39,25 +39,149 @@ The table core uses the following abstractions, commonly exposed by adapters:
 
 TanStack Table will help you build just about any type of table you can imagine. It has built-in state and APIs for the following features:
 
-- [Column Faceting](./guide/column-faceting) - List unique lists of column values or min/max values for a column
-- [Column Filtering](./guide/column-filtering) - Filter rows based on search values for a column
-- [Column Grouping](./guide/grouping) - Group columns together, run aggregations, and more
-- [Column Ordering](./guide/column-ordering) - Dynamically change the order of columns
-- [Column Pinning](./guide/column-pinning) - Pin (Freeze) columns to the left or right of the table
-- [Column Sizing](./guide/column-sizing) - Dynamically change the size of columns (column resizing handles)
-- [Column Visibility](./guide/column-visibility) - Hide/show columns
-- [Global Faceting](./guide/global-faceting) - List unique lists of column values or min/max values for the entire table
-- [Global Filtering](./guide/global-filtering) - Filter rows based on search values for the entire table
-- [Row Expanding](./guide/expanding) - Expand/collapse rows (sub-rows)
-- [Row Pagination](./guide/pagination) - Paginate rows
-- [Row Pinning](./guide/row-pinning) - Pin (Freeze) rows to the top or bottom of the table
-- [Row Selection](./guide/row-selection) - Select/deselect rows (checkboxes)
-- [Row Sorting](./guide/sorting) - Sort rows by column values
+<!-- ::start:framework -->
+
+# React
+
+- [Column Faceting](./framework/react/guide/column-faceting) - List unique lists of column values or min/max values for a column
+- [Column Filtering](./framework/react/guide/column-filtering) - Filter rows based on search values for a column
+- [Column Grouping](./framework/react/guide/grouping) - Group columns together, run aggregations, and more
+- [Column Ordering](./framework/react/guide/column-ordering) - Dynamically change the order of columns
+- [Column Pinning](./framework/react/guide/column-pinning) - Pin (Freeze) columns to the left or right of the table
+- [Column Sizing](./framework/react/guide/column-sizing) - Dynamically change the size of columns (column resizing handles)
+- [Column Visibility](./framework/react/guide/column-visibility) - Hide/show columns
+- [Global Faceting](./framework/react/guide/global-faceting) - List unique lists of column values or min/max values for the entire table
+- [Global Filtering](./framework/react/guide/global-filtering) - Filter rows based on search values for the entire table
+- [Row Expanding](./framework/react/guide/expanding) - Expand/collapse rows (sub-rows)
+- [Row Pagination](./framework/react/guide/pagination) - Paginate rows
+- [Row Pinning](./framework/react/guide/row-pinning) - Pin (Freeze) rows to the top or bottom of the table
+- [Row Selection](./framework/react/guide/row-selection) - Select/deselect rows (checkboxes)
+- [Row Sorting](./framework/react/guide/sorting) - Sort rows by column values
+
+# Preact
+
+- [Column Faceting](./framework/preact/guide/column-faceting) - List unique lists of column values or min/max values for a column
+- [Column Filtering](./framework/preact/guide/column-filtering) - Filter rows based on search values for a column
+- [Column Grouping](./framework/preact/guide/grouping) - Group columns together, run aggregations, and more
+- [Column Ordering](./framework/preact/guide/column-ordering) - Dynamically change the order of columns
+- [Column Pinning](./framework/preact/guide/column-pinning) - Pin (Freeze) columns to the left or right of the table
+- [Column Sizing](./framework/preact/guide/column-sizing) - Dynamically change the size of columns (column resizing handles)
+- [Column Visibility](./framework/preact/guide/column-visibility) - Hide/show columns
+- [Global Faceting](./framework/preact/guide/global-faceting) - List unique lists of column values or min/max values for the entire table
+- [Global Filtering](./framework/preact/guide/global-filtering) - Filter rows based on search values for the entire table
+- [Row Expanding](./framework/preact/guide/expanding) - Expand/collapse rows (sub-rows)
+- [Row Pagination](./framework/preact/guide/pagination) - Paginate rows
+- [Row Pinning](./framework/preact/guide/row-pinning) - Pin (Freeze) rows to the top or bottom of the table
+- [Row Selection](./framework/preact/guide/row-selection) - Select/deselect rows (checkboxes)
+- [Row Sorting](./framework/preact/guide/sorting) - Sort rows by column values
+
+# Solid
+
+- [Column Faceting](./framework/solid/guide/column-faceting) - List unique lists of column values or min/max values for a column
+- [Column Filtering](./framework/solid/guide/column-filtering) - Filter rows based on search values for a column
+- [Column Grouping](./framework/solid/guide/grouping) - Group columns together, run aggregations, and more
+- [Column Ordering](./framework/solid/guide/column-ordering) - Dynamically change the order of columns
+- [Column Pinning](./framework/solid/guide/column-pinning) - Pin (Freeze) columns to the left or right of the table
+- [Column Sizing](./framework/solid/guide/column-sizing) - Dynamically change the size of columns (column resizing handles)
+- [Column Visibility](./framework/solid/guide/column-visibility) - Hide/show columns
+- [Global Faceting](./framework/solid/guide/global-faceting) - List unique lists of column values or min/max values for the entire table
+- [Global Filtering](./framework/solid/guide/global-filtering) - Filter rows based on search values for the entire table
+- [Row Expanding](./framework/solid/guide/expanding) - Expand/collapse rows (sub-rows)
+- [Row Pagination](./framework/solid/guide/pagination) - Paginate rows
+- [Row Pinning](./framework/solid/guide/row-pinning) - Pin (Freeze) rows to the top or bottom of the table
+- [Row Selection](./framework/solid/guide/row-selection) - Select/deselect rows (checkboxes)
+- [Row Sorting](./framework/solid/guide/sorting) - Sort rows by column values
+
+# Svelte
+
+- [Column Faceting](./framework/svelte/guide/column-faceting) - List unique lists of column values or min/max values for a column
+- [Column Filtering](./framework/svelte/guide/column-filtering) - Filter rows based on search values for a column
+- [Column Grouping](./framework/svelte/guide/grouping) - Group columns together, run aggregations, and more
+- [Column Ordering](./framework/svelte/guide/column-ordering) - Dynamically change the order of columns
+- [Column Pinning](./framework/svelte/guide/column-pinning) - Pin (Freeze) columns to the left or right of the table
+- [Column Sizing](./framework/svelte/guide/column-sizing) - Dynamically change the size of columns (column resizing handles)
+- [Column Visibility](./framework/svelte/guide/column-visibility) - Hide/show columns
+- [Global Faceting](./framework/svelte/guide/global-faceting) - List unique lists of column values or min/max values for the entire table
+- [Global Filtering](./framework/svelte/guide/global-filtering) - Filter rows based on search values for the entire table
+- [Row Expanding](./framework/svelte/guide/expanding) - Expand/collapse rows (sub-rows)
+- [Row Pagination](./framework/svelte/guide/pagination) - Paginate rows
+- [Row Pinning](./framework/svelte/guide/row-pinning) - Pin (Freeze) rows to the top or bottom of the table
+- [Row Selection](./framework/svelte/guide/row-selection) - Select/deselect rows (checkboxes)
+- [Row Sorting](./framework/svelte/guide/sorting) - Sort rows by column values
+
+# Vue
+
+- [Column Faceting](./framework/vue/guide/column-faceting) - List unique lists of column values or min/max values for a column
+- [Column Filtering](./framework/vue/guide/column-filtering) - Filter rows based on search values for a column
+- [Column Grouping](./framework/vue/guide/grouping) - Group columns together, run aggregations, and more
+- [Column Ordering](./framework/vue/guide/column-ordering) - Dynamically change the order of columns
+- [Column Pinning](./framework/vue/guide/column-pinning) - Pin (Freeze) columns to the left or right of the table
+- [Column Sizing](./framework/vue/guide/column-sizing) - Dynamically change the size of columns (column resizing handles)
+- [Column Visibility](./framework/vue/guide/column-visibility) - Hide/show columns
+- [Global Faceting](./framework/vue/guide/global-faceting) - List unique lists of column values or min/max values for the entire table
+- [Global Filtering](./framework/vue/guide/global-filtering) - Filter rows based on search values for the entire table
+- [Row Expanding](./framework/vue/guide/expanding) - Expand/collapse rows (sub-rows)
+- [Row Pagination](./framework/vue/guide/pagination) - Paginate rows
+- [Row Pinning](./framework/vue/guide/row-pinning) - Pin (Freeze) rows to the top or bottom of the table
+- [Row Selection](./framework/vue/guide/row-selection) - Select/deselect rows (checkboxes)
+- [Row Sorting](./framework/vue/guide/sorting) - Sort rows by column values
+
+# Angular
+
+- [Column Faceting](./framework/angular/guide/column-faceting) - List unique lists of column values or min/max values for a column
+- [Column Filtering](./framework/angular/guide/column-filtering) - Filter rows based on search values for a column
+- [Column Grouping](./framework/angular/guide/grouping) - Group columns together, run aggregations, and more
+- [Column Ordering](./framework/angular/guide/column-ordering) - Dynamically change the order of columns
+- [Column Pinning](./framework/angular/guide/column-pinning) - Pin (Freeze) columns to the left or right of the table
+- [Column Sizing](./framework/angular/guide/column-sizing) - Dynamically change the size of columns (column resizing handles)
+- [Column Visibility](./framework/angular/guide/column-visibility) - Hide/show columns
+- [Global Faceting](./framework/angular/guide/global-faceting) - List unique lists of column values or min/max values for the entire table
+- [Global Filtering](./framework/angular/guide/global-filtering) - Filter rows based on search values for the entire table
+- [Row Expanding](./framework/angular/guide/expanding) - Expand/collapse rows (sub-rows)
+- [Row Pagination](./framework/angular/guide/pagination) - Paginate rows
+- [Row Pinning](./framework/angular/guide/row-pinning) - Pin (Freeze) rows to the top or bottom of the table
+- [Row Selection](./framework/angular/guide/row-selection) - Select/deselect rows (checkboxes)
+- [Row Sorting](./framework/angular/guide/sorting) - Sort rows by column values
+
+# Lit
+
+- [Column Faceting](./framework/lit/guide/column-faceting) - List unique lists of column values or min/max values for a column
+- [Column Filtering](./framework/lit/guide/column-filtering) - Filter rows based on search values for a column
+- [Column Grouping](./framework/lit/guide/grouping) - Group columns together, run aggregations, and more
+- [Column Ordering](./framework/lit/guide/column-ordering) - Dynamically change the order of columns
+- [Column Pinning](./framework/lit/guide/column-pinning) - Pin (Freeze) columns to the left or right of the table
+- [Column Sizing](./framework/lit/guide/column-sizing) - Dynamically change the size of columns (column resizing handles)
+- [Column Visibility](./framework/lit/guide/column-visibility) - Hide/show columns
+- [Global Faceting](./framework/lit/guide/global-faceting) - List unique lists of column values or min/max values for the entire table
+- [Global Filtering](./framework/lit/guide/global-filtering) - Filter rows based on search values for the entire table
+- [Row Expanding](./framework/lit/guide/expanding) - Expand/collapse rows (sub-rows)
+- [Row Pagination](./framework/lit/guide/pagination) - Paginate rows
+- [Row Pinning](./framework/lit/guide/row-pinning) - Pin (Freeze) rows to the top or bottom of the table
+- [Row Selection](./framework/lit/guide/row-selection) - Select/deselect rows (checkboxes)
+- [Row Sorting](./framework/lit/guide/sorting) - Sort rows by column values
+
+# Vanilla
+
+- Column Faceting - List unique lists of column values or min/max values for a column
+- Column Filtering - Filter rows based on search values for a column
+- Column Grouping - Group columns together, run aggregations, and more
+- Column Ordering - Dynamically change the order of columns
+- Column Pinning - Pin (Freeze) columns to the left or right of the table
+- Column Sizing - Dynamically change the size of columns (column resizing handles)
+- Column Visibility - Hide/show columns
+- Global Faceting - List unique lists of column values or min/max values for the entire table
+- Global Filtering - Filter rows based on search values for the entire table
+- Row Expanding - Expand/collapse rows (sub-rows)
+- [Row Pagination](./framework/vanilla/guide/pagination) - Paginate rows
+- Row Pinning - Pin (Freeze) rows to the top or bottom of the table
+- Row Selection - Select/deselect rows (checkboxes)
+- [Row Sorting](./framework/vanilla/guide/sorting) - Sort rows by column values
+<!-- ::end:framework -->
 
 These are just some of the capabilities that you can build with TanStack Table. There are many more features that are possible with TanStack Table that you can add along-side the built-in features.
 
-[Virtualization](./guide/virtualization) is an example of a feature that is not built-in to TanStack Table, but can be achieved by using another library (like [TanStack Virtual](https://tanstack.com/virtual/v3)) and adding it along-side your other table rendering logic.
+[Virtualization](./framework/react/guide/virtualization) is an example of a feature that is not built-in to TanStack Table, but can be achieved by using another library (like [TanStack Virtual](https://tanstack.com/virtual/v3)) and adding it along-side your other table rendering logic.
 
-TanStack Table also supports [Custom Features](./guide/custom-features) (plugins) that you can use to modify the table instance to add your own custom logic to the table in a more integrated way.
+TanStack Table also supports [Custom Features](./framework/react/guide/custom-features) (plugins) that you can use to modify the table instance to add your own custom logic to the table in a more integrated way.
 
 And of course, you can just write your own state and hooks to add whatever other features you want for your table. The features from the TanStack Table core are just a solid foundation to build on, with a large focus on performance and DX.
